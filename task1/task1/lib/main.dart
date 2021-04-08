@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(        
-          margin: const EdgeInsets.only(left:30.0 , right: 30.0, top: 100.0 , bottom: 210.0),
+          margin: const EdgeInsets.only(left:30.0 , right: 30.0, top: 100.0 , bottom: 187.0),
           decoration: BoxDecoration(
                    boxShadow: [
                       BoxShadow(
@@ -30,7 +30,9 @@ class HomePage extends StatelessWidget {
           ),
           child: Center(
              child: Column(
+               
              children: [
+               Text('1st task :',style: TextStyle(fontSize: 20.0),),
                 Container(
                   width: 300.0,
                   height: 200.0,
@@ -39,7 +41,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.vertical(top: Radius.circular(5.0)),
                     image: DecorationImage(
                         image: AssetImage(
-                          'assets/flutter5.png',
+                          'assets/f2.png',
                         ),
                         fit: BoxFit.fill),
                   ),
@@ -51,7 +53,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.vertical(bottom: Radius.circular(5.0)),
                     image: DecorationImage(
                         image: AssetImage(
-                          'assets/flutter5.png',
+                          'assets/f2.png',
                         ),
                         fit: BoxFit.fill),
                   ),
