@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:task_3/final.dart';
 
 import 'quiz.dart';
 
 class QuestionScreen extends StatefulWidget {
   final int index;
+  static int totalanswer = 0;
   QuestionScreen(this.index);
   @override
   _State createState() => _State();
@@ -81,6 +83,7 @@ class _State extends State<QuestionScreen> {
                   onPressed: () {
                     if (myQuiz.quiz[widget.index].answer == 25)
                       setState(() {
+                        QuestionScreen.totalanswer += 1;
                         isCorrect = true;
                         isWrong = false;
                       });
@@ -109,6 +112,7 @@ class _State extends State<QuestionScreen> {
                   onPressed: () {
                     if (myQuiz.quiz[widget.index].answer == 5)
                       setState(() {
+                        QuestionScreen.totalanswer += 1;
                         isCorrect = true;
                         isWrong = false;
                       });
@@ -137,6 +141,7 @@ class _State extends State<QuestionScreen> {
                   onPressed: () {
                     if (myQuiz.quiz[widget.index].answer == 9)
                       setState(() {
+                        QuestionScreen.totalanswer += 1;
                         isCorrect = true;
                         isWrong = false;
                       });
@@ -165,6 +170,7 @@ class _State extends State<QuestionScreen> {
                   onPressed: () {
                     if (myQuiz.quiz[widget.index].answer == 10)
                       setState(() {
+                        QuestionScreen.totalanswer += 1;
                         isCorrect = true;
                         isWrong = false;
                       });
@@ -193,12 +199,22 @@ class _State extends State<QuestionScreen> {
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => QuestionScreen(widget.index + 1),
-                  ),
-                );
+                if (widget.index < 3) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuestionScreen(widget.index + 1),
+                    ),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => finalpage(),
+                    ),
+                  );
+                }
+                ;
               },
               child: Container(
                 width: 150.0,
