@@ -3,8 +3,8 @@
 // ignore: camel_case_types
 class contact {
   static final List<String> mails = [
-    'hagar',
-    'hadeer',
+    'hello how are you',
+    'heyyyy!',
   ];
 
   static final List<String> names = ['hagar', 'hadeer'];
